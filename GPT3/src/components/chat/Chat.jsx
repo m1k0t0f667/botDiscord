@@ -8,7 +8,7 @@ const ChatPage=(props)=>{
   const [toggle,setToggle]=useState(false)
 
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: process.env.API_KEY,
   });
   const chatGPT = new OpenAIApi(configuration);
   const [logMessage, setLogMessage]=useState([{ //  Explain things like you're talking to a software professional with 5 years of experience.
